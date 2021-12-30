@@ -34,3 +34,21 @@ int CountEvenElements(int[] array)
 }
 
 int X = CountEvenElements(matrix);
+int[] FillArrayEvenNumbers(int[] array, int size)
+{
+    int j = 0;
+    int[] arrayEven = new int[size];
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i] % 2 == 0  && array[i] > 0)
+        {
+            arrayEven[j] = array[i];
+            j++;
+        }
+    }
+    return arrayEven;
+}
+
+int[] evenArray = FillArrayEvenNumbers(matrix, X);
+System.Console.Write("Массив сформированный из чётных чисел = ");
+PrintArray(evenArray);
