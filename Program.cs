@@ -20,3 +20,17 @@ void PrintArray(int[] array)
 int[] matrix = CreatedArray(10, -30, 30);
 System.Console.Write("Целочисленный массив = ");
 PrintArray(matrix);
+int CountEvenElements(int[] array)
+{
+    int count = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i] % 2 == 0  && array[i] > 0)
+        {
+            count++;
+        }
+    }
+    return count;
+}
+
+int X = CountEvenElements(matrix);
